@@ -1,0 +1,359 @@
+[
+  {
+    "titulo": "3%",
+    "ano_inicio": 2016,
+    "plataforma": "Netflix",
+    "diretor": "Jotagá Crema",
+    "sinopse": "Em um futuro dividido, jovens disputam uma única chance de entrar no Maralto, a parte rica da sociedade."
+  },
+  {
+    "titulo": "Tremembé",
+    "ano_inicio": 2025,
+    "plataforma": "Prime Video",
+    "diretor": "Vera Egito",
+    "sinopse": "Detentos que cometeram crimes horríveis e de repercussão nacional são obrigados a conviver na penitenciária de Tremembé."
+  },
+  {
+    "titulo": "Cidade de Deus: A Luta Não Para",
+    "ano_inicio": 2024,
+    "plataforma": "HBO Max",
+    "diretor": "Fernando Meirelles",
+    "sinopse": "Através das memórias de Buscapé nos anos 2000, trechos do filme são mostrados como flashbacks. A produção retrata o impacto dos conflitos entre policiais, traficantes e milicianos na vida dos moradores da comunidade."
+  },
+  {
+    "titulo": "Pedaço de Mim",
+    "ano_inicio": 2024,
+    "plataforma": "Netflix",
+    "diretor": "Luiz Noronha",
+    "sinopse": "Depois de uma noite turbulenta, uma mulher descobre que está grávida de gêmeos de pais diferentes. Agora, ela luta para esconder segredos e manter a família unida."
+  },
+  {
+    "titulo": "Bom Dia, Verônica",
+    "ano_inicio": 2020,
+    "plataforma": "Netflix",
+    "diretor": "José Henrique Fonseca",
+    "sinopse": "Uma escrivã investiga crimes contra mulheres e descobre uma rede de violência e corrupção."
+  },
+  {
+    "titulo": "Cangaço Novo",
+    "ano_inicio": 2023,
+    "plataforma": "Prime Video",
+    "diretor": "Fellipe Gamarano Barbosa",
+    "sinopse": "Um bancário descobre suas raízes no sertão e é puxado para uma gangue de assaltantes."
+  },
+  {
+    "titulo": "Dom",
+    "ano_inicio": 2021,
+    "plataforma": "Prime Video",
+    "diretor": "Breno Silveira",
+    "sinopse": "A trajetória real de Pedro Dom e a relação conflituosa com seu pai policial."
+  },
+  {
+    "titulo": "Sob Pressão",
+    "ano_inicio": 2017,
+    "plataforma": "Globoplay",
+    "diretor": "Andrucha Waddington",
+    "sinopse": "Médicos enfrentam emergências e dramas pessoais em um hospital público precário."
+  },
+  {
+    "titulo": "Coisa Mais Linda",
+    "ano_inicio": 2019,
+    "plataforma": "Netflix",
+    "diretor": "Caito Ortiz",
+    "sinopse": "Nos anos 1950, a paulistana Malu se muda para o Rio de Janeiro com o marido para abrir um restaurante. Porém, ele rouba todo o seu dinheiro e foge. Ao conhecer a cantora Adélia e a escritora Thereza, a jovem abre um clube noturno de bossa nova."
+  },
+  {
+    "titulo": "Impuros",
+    "ano_inicio": 2018,
+    "plataforma": "Star+",
+    "diretor": "Renato Siqueira",
+    "sinopse": "Nos anos 90, um jovem da favela vira um dos maiores traficantes do Rio."
+  },
+  {
+    "titulo": "Justiça",
+    "ano_inicio": 2016,
+    "plataforma": "Globoplay",
+    "diretor": "José Luiz Villamarim",
+    "sinopse": "Histórias que se cruzam após quatro pessoas serem presas no mesmo dia."
+  },
+  {
+    "titulo": "Cidade Invisível",
+    "ano_inicio": 2021,
+    "plataforma": "Netflix",
+    "diretor": "Carlos Saldanha",
+    "sinopse": "Um detetive descobre que figuras do folclore brasileiro vivem entre nós."
+  },
+  {
+    "titulo": "Arcanjo Renegado",
+    "ano_inicio": 2020,
+    "plataforma": "Globoplay",
+    "diretor": "Heitor Dhalia",
+    "sinopse": "Um policial do BOPE entra em conflito após uma operação trágica."
+  },
+  {
+    "titulo": "Sintonia",
+    "ano_inicio": 2019,
+    "plataforma": "Netflix",
+    "diretor": "Konrad Dantas",
+    "sinopse": "Três jovens da periferia seguem caminhos ligados ao funk, crime e igreja."
+  },
+  {
+    "titulo": "Magnífica 70",
+    "ano_inicio": 2015,
+    "plataforma": "HBO Max",
+    "diretor": "Cláudio Torres",
+    "sinopse": "Durante a ditadura, um censor se envolve na produção de pornochanchada."
+  },
+  {
+    "titulo": "Hilda Furacão",
+    "ano_inicio": 1998,
+    "plataforma": "Globoplay",
+    "diretor": "Wolf Maya",
+    "sinopse": "A jovem socialite Hilda Furacão escandaliza a conservadora sociedade mineira dos anos 1950 e 1960 ao se transformar em prostituta."
+  },
+  {
+    "titulo": "Fim",
+    "ano_inicio": 2023,
+    "plataforma": "Globoplay",
+    "diretor": "Bruna Lessa",
+    "sinopse": "Um grupo de amigos revisita suas vidas e escolhas ao longo de décadas."
+  },
+  {
+    "titulo": "Amor da Minha Vida",
+    "ano_inicio": 2024,
+    "plataforma": "Disney+",
+    "diretor": "Lucas Vasconcelos",
+    "sinopse": "Dois melhores amigos reavaliam o amor enquanto enfrentam frustrações da vida adulta."
+  },
+  {
+    "titulo": "O Mecanismo",
+    "ano_inicio": 2018,
+    "plataforma": "Netflix",
+    "diretor": "José Padilha",
+    "sinopse": "Um delegado aposentado enfrenta um enorme esquema de corrupção."
+  },
+  {
+    "titulo": "Os Outros",
+    "ano_inicio": 2023,
+    "plataforma": "Globoplay",
+    "diretor": "Luiz Villaça",
+    "sinopse": "Uma briga entre adolescentes inicia uma guerra entre famílias vizinhas."
+  },
+  {
+    "titulo": "Irmandade",
+    "ano_inicio": 2019,
+    "plataforma": "Netflix",
+    "diretor": "Pedro Morelli",
+    "sinopse": "Uma advogada é forçada a se infiltrar na facção criminosa liderada por seu irmão."
+  },
+  {
+    "titulo": "Aruanas",
+    "ano_inicio": 2019,
+    "plataforma": "Globoplay",
+    "diretor": "Estela Renner",
+    "sinopse": "Ativistas ambientais investigam crimes de uma mineradora na Amazônia."
+  },
+  {
+    "titulo": "De Volta aos 15",
+    "ano_inicio": 2022,
+    "plataforma": "Netflix",
+    "diretor": "Maria de Médicis",
+    "sinopse": "Anita retorna ao passado para tentar mudar seu futuro e o das pessoas ao redor."
+  },
+  {
+    "titulo": "Verdades Secretas",
+    "ano_inicio": 2015,
+    "plataforma": "Globoplay",
+    "diretor": "Mauro Mendonça Filho",
+    "sinopse": "Uma jovem modelo entra no polêmico mundo do 'book rosa'."
+  },
+  {
+    "titulo": "Ninguém Tá Olhando",
+    "ano_inicio": 2019,
+    "plataforma": "Netflix",
+    "diretor": "Daniel Rezende",
+    "sinopse": "Um anjo rebelde questiona as regras do sistema que controla os humanos."
+  },
+  {
+    "titulo": "Rensga Hits!",
+    "ano_inicio": 2022,
+    "plataforma": "Globoplay",
+    "diretor": "André Brandão",
+    "sinopse": "Uma cantora tenta se firmar no sertanejo após fugir do próprio casamento."
+  },
+  {
+    "titulo": "Psi",
+    "ano_inicio": 2014,
+    "plataforma": "HBO Max",
+    "diretor": "Marcus Baldini",
+    "sinopse": "Um psicanalista se envolve em casos clínicos incomuns."
+  },
+  {
+    "titulo": "Carcereiros",
+    "ano_inicio": 2017,
+    "plataforma": "Globoplay",
+    "diretor": "José Eduardo Belmonte",
+    "sinopse": "A rotina de um carcereiro lidando com dilemas morais no presídio."
+  },
+  {
+    "titulo": "Pico da Neblina",
+    "ano_inicio": 2019,
+    "plataforma": "HBO Max",
+    "diretor": "Quico Meirelles",
+    "sinopse": "Com a maconha legalizada, um ex-traficante tenta montar um negócio legal."
+  },
+  {
+    "titulo": "A Sogra Que Te Pariu",
+    "ano_inicio": 2022,
+    "plataforma": "Netflix",
+    "diretor": "Alexandre Charro",
+    "sinopse": "A vida de um casal vira de cabeça para baixo com a chegada da sogra."
+  },
+  {
+    "titulo": "A Divisão",
+    "ano_inicio": 2019,
+    "plataforma": "Globoplay",
+    "diretor": "Vicente Amorim",
+    "sinopse": "A Divisão Antissequestro enfrenta crimes nos anos 90 no Rio."
+  },
+  {
+    "titulo": "Manhãs de Setembro",
+    "ano_inicio": 2021,
+    "plataforma": "Prime Video",
+    "diretor": "Luis Pinheiro",
+    "sinopse": "A vida de Cassandra muda quando descobre que tem um filho."
+  },
+  {
+    "titulo": "O Negócio",
+    "ano_inicio": 2013,
+    "plataforma": "HBO Max",
+    "diretor": "Michel Tikhomiroff",
+    "sinopse": "Três garotas de programa aplicam estratégias de marketing para mudar a profissão."
+  },
+  {
+    "titulo": "As Five",
+    "ano_inicio": 2020,
+    "plataforma": "Globoplay",
+    "diretor": "Fabricio Mamberti",
+    "sinopse": "Cinco amigas enfrentam a vida adulta em São Paulo."
+  },
+  {
+    "titulo": "Desalma",
+    "ano_inicio": 2020,
+    "plataforma": "Globoplay",
+    "diretor": "Ana Paula Maia",
+    "sinopse": "Uma cidade revive rituais pagãos após o desaparecimento de uma jovem."
+  },
+  {
+    "titulo": "Hard",
+    "ano_inicio": 2020,
+    "plataforma": "HBO Max",
+    "diretor": "Júlio Andrade",
+    "sinopse": "Uma viúva herda uma produtora pornô e tenta salvar o negócio."
+  },
+  {
+    "titulo": "O Rei da TV",
+    "ano_inicio": 2022,
+    "plataforma": "Star+",
+    "diretor": "Marcus Baldini",
+    "sinopse": "A trajetória de Silvio Santos desde a juventude."
+  },
+  {
+    "titulo": "Sentença",
+    "ano_inicio": 2022,
+    "plataforma": "Prime Video",
+    "diretor": "Fabio Mendonça",
+    "sinopse": "Uma advogada enfrenta dilemas éticos ao defender um líder de facção."
+  },
+  {
+    "titulo": "Filhas de Eva",
+    "ano_inicio": 2021,
+    "plataforma": "Globoplay",
+    "diretor": "Leonardo Nogueira",
+    "sinopse": "Três mulheres repensam suas vidas após uma ruptura inesperada."
+  },
+  {
+    "titulo": "Maldivas",
+    "ano_inicio": 2022,
+    "plataforma": "Netflix",
+    "diretor": "Carolina Jabor",
+    "sinopse": "Uma jovem investiga a morte da mãe em um condomínio de luxo."
+  },
+  {
+    "titulo": "Olhar Indiscreto",
+    "ano_inicio": 2023,
+    "plataforma": "Netflix",
+    "diretor": "Marcelo Trotta",
+    "sinopse": "Uma hacker voyeur se envolve em um caso perigoso envolvendo sua vizinha."
+  },
+  {
+    "titulo": "O Escolhido",
+    "ano_inicio": 2019,
+    "plataforma": "Netflix",
+    "diretor": "Michel Tikhomiroff",
+    "sinopse": "Médicos vão a uma vila isolada e encontram um culto misterioso."
+  },
+  {
+    "titulo": "Onde Está Meu Coração",
+    "ano_inicio": 2021,
+    "plataforma": "Globoplay",
+    "diretor": "Luisa Lima",
+    "sinopse": "Uma médica luta para esconder seu vício enquanto tenta manter a vida profissional e familiar."
+  },
+  {
+    "titulo": "Unidade Básica",
+    "ano_inicio": 2016,
+    "plataforma": "Globoplay",
+    "diretor": "Rodrigo César",
+    "sinopse": "Dois médicos enfrentam a rotina e desafios de uma UBS."
+  },
+  {
+    "titulo": "Se Eu Fechar os Olhos Agora",
+    "ano_inicio": 2019,
+    "plataforma": "Globoplay",
+    "diretor": "Carlos Manga Jr.",
+    "sinopse": "Dois adolescentes investigam um assassinato em uma pequena cidade."
+  },
+  {
+    "titulo": "A Vida Pela Frente",
+    "ano_inicio": 2023,
+    "plataforma": "Globoplay",
+    "diretor": "Felipe Braga",
+    "sinopse": "Um grupo de jovens enfrenta os dramas da adolescência no fim dos anos 90."
+  },
+  {
+    "titulo": "Rotas do Ódio",
+    "ano_inicio": 2018,
+    "plataforma": "Globoplay",
+    "diretor": "Susanna Lira",
+    "sinopse": "Uma delegada investiga crimes raciais e grupos neonazistas."
+  },
+  {
+    "titulo": "Auto Posto",
+    "ano_inicio": 2020,
+    "plataforma": "Prime Video",
+    "diretor": "André Pellenz",
+    "sinopse": "Funcionários de um posto falido vivem situações absurdas no trabalho."
+  },
+  {
+    "titulo": "Todxs Nós",
+    "ano_inicio": 2020,
+    "plataforma": "HBO Max",
+    "diretor": "Vera Egito",
+    "sinopse": "Rafa, jovem não binária, explora identidade e liberdade ao se mudar para São Paulo."
+  },
+  {
+    "titulo": "Lov3",
+    "ano_inicio": 2022,
+    "plataforma": "Prime Video",
+    "diretor": "Gustavo Bonafé",
+    "sinopse": "Três irmãos lidam com novos modelos de amor e independência."
+  },
+  {
+    "titulo": "Sítio do Picapau Amarelo",
+    "ano_inicio": 2001,
+    "plataforma": "Prime Video",
+    "diretor": "Cao Hamburger",
+    "sinopse": "Releitura moderna das histórias do Sítio e seus personagens fantásticos."
+  }
+]
