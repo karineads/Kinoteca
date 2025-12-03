@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinoteca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- =============================== -->
+  <!-- HEADER + MENU DE NAVEGAÇÃO -->
+  <!-- =============================== -->
+  <header class="header">
+    <div class="logo">🍿Kinoteca</div>
+
+    <nav class="nav">
+      <a href="#home">Início</a>
+      <a href="#sec-filmes">Filmes</a>
+      <a href="#sec-animacoes">Animações</a>
+      <a href="#sec-documentarios">Documentários</a>
+      <a href="#sec-novelas">Novelas</a>
+      <a href="#sec-series">Séries</a>
+    </nav>
+
+    <button class="login-btn" id="loginBtn" onclick="abrirLogin()">Entrar</button>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar filmes brasileiros...">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </header>
+
+  <!-- =============================== -->
+  <!-- HERO SECTION -->
+  <!-- =============================== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>O nosso cinema!</h1>
+      <p>Descubra filmes, novelas, animações e documentários brasileiros que contam a nossa história.</p>
+    </div>
+  </section>
+
+  <!-- =============================== -->
+  <!-- CATÁLOGO -->
+  <!-- =============================== -->
+  <main class="catalog">
+
+    <!-- FILMES -->
+    <section class="row" id="sec-filmes">
+      <h2>Filmes</h2>
+      <div class="carousel" id="filmes"></div>
+      <button class="scroll-btn right" onclick="scrollRight('filmes')">›</button>
+      <button class="scroll-btn left" onclick="scrollLeftBtn('filmes')">‹</button>
+    </section>
+
+    <!-- ANIMAÇÕES -->
+    <section class="row" id="sec-animacoes">
+      <h2>Animações</h2>
+      <div class="carousel" id="animacoes"></div>
+      <button class="scroll-btn right" onclick="scrollRight('animacoes')">›</button>
+      <button class="scroll-btn left" onclick="scrollLeftBtn('animacoes')">‹</button>
+    </section>
+
+    <!-- DOCUMENTÁRIOS -->
+    <section class="row" id="sec-documentarios">
+      <h2>Documentários</h2>
+      <div class="carousel" id="documentarios"></div>
+      <button class="scroll-btn right" onclick="scrollRight('documentarios')">›</button>
+      <button class="scroll-btn left" onclick="scrollLeftBtn('documentarios')">‹</button>
+    </section>
+
+    <!-- NOVELAS -->
+    <section class="row" id="sec-novelas">
+      <h2>Novelas</h2>
+      <div class="carousel" id="novelas"></div>
+      <button class="scroll-btn right" onclick="scrollRight('novelas')">›</button>
+      <button class="scroll-btn left" onclick="scrollLeftBtn('novelas')">‹</button>
+    </section>
+
+    <!-- SÉRIES -->
+    <section class="row" id="sec-series">
+      <h2>Séries</h2>
+      <div class="carousel" id="series"></div>
+      <button class="scroll-btn right" onclick="scrollRight('series')">›</button>
+      <button class="scroll-btn left" onclick="scrollLeftBtn('series')">‹</button>
+    </section>
+
+  </main>
+
+  <!-- =============================== -->
+  <!-- POPUP DE DETALHES -->
+  <!-- =============================== -->
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <button id="closePopup">×</button>
+      <div id="popupContent"></div>
+      <iframe id="trailerFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- MODAL DE REGISTRO/LOGIN -->
+  <div id="loginModal" class="modal">
+    <div class="popup-box login-box">
+      <h2>Entrar no Kinoteca</h2>
+      <div class="login-tabs">
+        <button class="tab-active" onclick="abrirTab('login')">Login</button>
+        <button onclick="abrirTab('registro')">Registrar</button>
+      </div>
+      
+      <div id="login-form" class="form-active">
+        <input type="text" id="loginUsername" placeholder="Nome de usuário">
+        <input type="password" id="loginPassword" placeholder="Senha">
+        <button onclick="fazerLogin()">Entrar</button>
+      </div>
+      
+      <div id="registro-form" class="form-hidden">
+        <input type="text" id="regUsername" placeholder="Escolha um nome de usuário">
+        <input type="password" id="regPassword" placeholder="Crie uma senha">
+        <input type="password" id="regConfirmPassword" placeholder="Confirme a senha">
+        <button onclick="fazerRegistro()">Registrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERFIL DO USUÁRIO -->
+  <div id="perfilModal" class="modal">
+    <div class="popup-box perfil-box">
+      <h2>Meu Perfil</h2>
+      <div class="perfil-info">
+        <h3 id="perfilUsername"></h3>
+        <div class="perfil-stats">
+          <div class="stat">
+            <span class="stat-number" id="statVistos">0</span>
+            <span class="stat-label">Filmes Vistos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" id="statWatchlist">0</span>
+            <span class="stat-label">Na Lista</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" id="statComentarios">0</span>
+            <span class="stat-label">Comentários</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="perfil-acoes">
+        <button onclick="verMinhaLista()">Minha Lista</button>
+        <button onclick="verFilmesVistos()">Já Vistos</button>
+        <button onclick="verMeusComentarios()">Meus Comentários</button>
+        <button onclick="sair()" class="btn-sair">Sair</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL MINHAS LISTAS -->
+  <div id="listasModal" class="modal">
+    <div class="popup-box listas-box">
+      <h2 id="listaTitulo">Minha Lista</h2>
+      <div class="minha-lista" id="minhaListaContent"></div>
+      <button onclick="fecharListas()" class="btn-fechar">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Kinoteca</h3>
+      <p>Celebrando o cinema, a TV e a animação brasileira.</p>
+      <div class="footer-social">
+        <a href="https://github.com/karineads" target="_blank">GitHub</a>
+        <span>•</span>
+        <a href="https://www.themoviedb.org/" target="_blank">Créditos & Direitos</a>
+      </div>
+
+      <p class="footer-copy">© 2025 Kinoteca — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

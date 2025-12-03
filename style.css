@@ -1,0 +1,1007 @@
+/* =========================================
+   1. VARIÁVEIS E RESET (A Base de Tudo)
+========================================= */
+:root {
+  --fundo: #f3f6f6;
+  --texto: #111;
+  --verde: #047d52;  /* Cor principal */
+  --dourado: #F0B429; /* Cor destaque */
+  --azul: #338db7;   /* Cor secundária */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding não aumente o tamanho da caixa */
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+/* =========================================
+   2. HEADER (Menu Superior)
+========================================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 15px 10px;
+  background: rgba(166, 193, 255, 0.523);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--dourado);
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  margin-left: 40px;
+  margin-top: 10px; 
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--dourado);
+}
+
+.login-btn {
+  margin-left: auto;
+  background: #F0B429;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-container {
+  position: relative;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+
+#searchInput {
+  width: 320px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 2px solid var(--dourado);
+  outline: none;
+  font-size: 0.95em;
+}
+
+#searchInput:focus {
+  border-color: var(--verde);
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.981);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.search-results div {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  color: #333;
+}
+
+.search-results div:hover {
+  background: #f0f0f0;
+}
+
+/* =========================================
+   3. HERO (Banner Principal)
+========================================= */
+.hero {
+  position: relative;
+  height: 96vh;
+  background: url('imagem/montenegro.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.249); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin-top: 390px;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+.cta-btn {
+  background: var(--verde);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: var(--dourado);
+}
+
+/* =========================================
+   4. CATÁLOGO E CARROSSEL
+========================================= */
+.catalog {
+  padding: 100px 60px;
+}
+
+.row {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.row h2 {
+  margin-bottom: 15px;
+  color: var(--azul);
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; 
+}
+
+.card {
+  min-width: 150px;
+  height: 250px;
+  background: #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.scroll-btn:hover { background: var(--verde); }
+.scroll-btn.left { left: -20px; }
+.scroll-btn.right { right: -20px; }
+
+/* =========================================
+   5. POPUP GERAL E DETALHES DO FILME
+========================================= */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.294);
+  z-index: 20;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.popup-box {
+  background: #161616;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.242);
+  gap: 30px;
+}
+
+.popup-detalhes {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.poster-detalhe {
+  width: 180px;
+  height: 270px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.info-detalhe {
+  color: #f4f4f4;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.info-detalhe h2 {
+  color: var(--dourado);
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.info-detalhe p {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+#trailerFrame {
+  width: 400px;       
+  height: 300px;      
+  border-radius: 10px;
+  border: none;
+  background: #000;
+  margin: 0 auto;
+  display: block;
+}
+
+#closePopup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2em;
+  color: white;
+  background: var(--verde);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+#closePopup:hover {
+  background: var(--dourado);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+/* Scrollbar */
+.popup-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.popup-box::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 4px;
+}
+
+.popup-box::-webkit-scrollbar-thumb {
+  background: var(--dourado);
+  border-radius: 4px;
+}
+
+.popup-box::-webkit-scrollbar-thumb:hover {
+  background: var(--dourado);
+}
+
+/* =========================================
+   6. MODAIS DE LOGIN/PERFIL
+========================================= */
+
+/* Fundo Escuro atrás da caixa branca */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(43, 42, 42, 0.7);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+/* A Caixa Branca em si */
+.modal .popup-box {
+  background: #e7e4e4;
+  color: #1c2b3f;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  animation: subir 0.3s ease-out;
+}
+
+@keyframes subir {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Abas (Entrar / Registrar) */
+.login-tabs {
+  display: flex;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #dedede;
+}
+
+.login-tabs button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 15px;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.login-tabs button.tab-active {
+  color: #fcfcfc;;
+  border-bottom: 3px solid var(--verde);
+  font-weight: bold;
+}
+
+/* Formulários */
+.modal input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.modal button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background: var(--verde);
+  color: white;
+}
+
+.modal button:hover {
+  background: var(--dourado);
+}
+
+.form-hidden { display: none; }
+.form-active { display: block; }
+
+/* =========================================
+   7. ESTILO DO PERFIL E ESTATÍSTICAS
+========================================= */
+.perfil-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.063);
+  border-radius: 10px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--dourado);
+  text-shadow: 0 0 5px rgba(240, 180, 41, 0.5);
+}
+
+.perfil-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.perfil-acoes button {
+  background: white;
+  border: 2px solid var(--verde);
+  color: var(--verde);
+}
+
+.perfil-acoes button:hover {
+  background: var(--verde);
+  color: white;
+}
+
+.btn-sair {
+  border-color: #d32f2f !important;
+  color: #d32f2f !important;
+}
+
+.btn-sair:hover {
+  background: #d32f2f !important;
+  color: white !important;
+}
+
+/* =========================================
+   8. ESTILO DAS LISTAS COM FOTO
+========================================= */
+.item-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  gap: 15px;
+}
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.thumb-lista {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.nome-filme {
+  font-weight: 600;
+  color: #616161;
+}
+
+.acoes-lista {
+    display: flex;
+    gap: 8px;
+}
+
+
+.acoes-lista button, .btn-lixeira {
+  background: transparent !important;
+  color: #555 !important;
+  width: auto !important;
+  padding: 5px !important;
+  font-size: 1.2em !important;
+  margin: 0 !important;
+}
+
+.acoes-lista button:hover { transform: scale(1.2); color: var(--verde) !important; }
+.btn-lixeira:hover { color: red !important; }
+
+/* Botão de Fechar Lista */
+.btn-fechar {
+    background: #555 !important;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   ESTRELAS
+========================================= */
+.rating {
+  margin: 10px 0;
+}
+
+.rating span {
+  font-size: 2em;
+  color: #555;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px transparent;
+  position: relative;
+}
+
+.rating span:hover {
+  color: var(--dourado);
+  text-shadow: 0 0 6px var(--dourado);
+  transform: scale(1.3);
+}
+
+.rating span.active {
+  color: var(--dourado);
+  text-shadow: 0 0 6px var(--dourado);
+}
+
+
+/* =========================================
+   COMENTÁRIOS COM ESTRELAS E BOTÕES DE DELETAR
+========================================= */
+.comment {
+  background: #2a2a2a;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border-left: 4px solid var(--verde);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.comment:hover {
+  background: #333;
+  transform: translateX(5px);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-user {
+  font-weight: bold;
+  color: var(--dourado);
+  font-size: 1.1em;
+}
+
+.comment-rating {
+  color: var(--dourado);
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.comment-date {
+  font-size: 0.8em;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.comment-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.comment:hover .comment-actions {
+  opacity: 1;
+}
+
+.btn-deletar {
+  background: #d32f2f !important;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.3s ease;
+}
+
+.btn-deletar:hover {
+  background: #f44336 !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+}
+
+/* =========================================
+   MODAL DE LISTAS PESSOAIS
+========================================= */
+.listas-box {
+  max-width: 600px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%) !important;
+  border: 1px solid var(--azul);
+}
+
+.listas-box h2 {
+  color: var(--dourado);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.minha-lista {
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 15px 0;
+  padding-right: 10px;
+}
+
+.minha-lista::-webkit-scrollbar {
+  width: 6px;
+}
+
+.minha-lista::-webkit-scrollbar-thumb {
+  background: var(--verde);
+  border-radius: 3px;
+}
+
+.item-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  margin: 10px 0;
+  background: #2a2a2a;
+  border-radius: 10px;
+  border-left: 4px solid var(--verde);
+  transition: all 0.3s ease;
+  gap: 15px;
+}
+
+.item-lista:hover {
+  background: #3a3a3a;
+  transform: translateX(5px);
+}
+
+.item-lista span {
+  color: white;
+  font-weight: 500;
+}
+
+.item-lista button {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.3s ease;
+}
+
+.item-lista button:hover {
+  background: #f44336;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+@media (max-width: 768px) {
+  .perfil-acoes {
+    grid-template-columns: 1fr;
+  }
+  
+  .perfil-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-box,
+  .perfil-box,
+  .listas-box {
+    width: 95% !important;
+    margin: 10px;
+  }
+  
+  .rating span {
+    font-size: 1.6em;
+  }
+}
+
+.modal-content h2 {
+  color: var(--azul);
+  margin-bottom: 25px;
+  font-size: 1.5em;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.modal-content input:focus {
+  border-color: var(--verde);
+  outline: none;
+}
+
+.modal-content button {
+  background: var(--verde);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin: 8px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.modal-content button:hover {
+  background: var(--dourado);
+  transform: translateY(-2px);
+}
+
+.btn-fechar {
+  background: #5f5f5f !important;
+}
+
+/* =========================================
+   AÇÕES DO USUÁRIO (DENTRO DO POPUP)
+========================================= */
+.user-actions {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #464646;
+}
+
+.user-actions h3 {
+  color: var(--dourado);
+  margin: 15px 0 8px;
+  font-size: 1.1em;
+}
+
+/* Estrelas */
+.rating {
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.rating span {
+  font-size: 32px;
+  color: #666;
+  transition: color 0.25s ease, transform 0.25s ease;
+  user-select: none;
+}
+
+.rating span:hover {
+  color: var(--dourado);
+  transform: scale(1.25);
+}
+
+.rating span.hovered,
+.rating span.active {
+  color: var(--dourado);
+}
+
+.rating span.hovered {
+  text-shadow: 0 0 6px rgba(222, 189, 0, 0.8);
+}
+
+/* Comentários */
+.user-actions textarea {
+  width: 100%;
+  height: 50px;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: white;
+  font-size: 0.9em;
+  resize: vertical;
+}
+
+.user-actions button {
+  background: var(--verde);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: all 0.3s;
+}
+
+.user-actions button:hover {
+  background: var(--dourado);
+  transform: translateY(-1px);
+}
+
+.comment {
+  background: #2a2a2a;
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-radius: 6px;
+  border-left: 3px solid var(--verde);
+  font-size: 0.9em;
+}
+
+.comment strong {
+  color: var(--dourado);
+}
+
+/* =========================================
+   AVALIAÇÃO EXTERNA (TMDB)
+========================================= */
+.avaliacao-externa {
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  border-left: 4px solid var(--dourado);
+}
+
+.rating-tmdb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.estrelas-tmdb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.estrela {
+  font-size: 1.3em;
+  color: #555;
+}
+
+.estrela.cheia {
+  color: var(--dourado);
+}
+
+.estrela.meia {
+  background: linear-gradient(90deg, var(--dourado) 50%, #555 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nota {
+  font-weight: bold;
+  color: var(--dourado);
+  font-size: 1.1em;
+}
+
+.detalhes-avaliacao {
+  text-align: right;
+}
+
+.porcentagem {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--dourado);
+}
+
+.votos {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+.comentarios-externos {
+  margin: 15px 0;
+}
+
+.comment-externo {
+  background: #2a2a2a;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border-left: 3px solid var(--verde);
+}
+
+.comment-externo strong {
+  color: var(--dourado);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-externo p {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.sem-avaliacao {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.footer {
+  background: #1e2851;
+  color: #eee;
+  padding: 40px 30px;
+  text-align: center;
+  margin-top: 10px;
+  border-top: 3px solid var(--dourado);
+}
+
+.footer h3 {
+  font-size: 1.2em;
+  color: var(--dourado);
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 0.9em;
+  color: #ccc;
+  margin: 9px 0;
+}
+
+.footer-social {
+  margin: 12px 0;
+  font-size: 1em;
+}
+
+.footer-social a {
+  color: var(--fundo);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--dourado);
+}
+
+.footer-social span {
+  color: #d6d6d6;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+.footer-copy {
+  margin-top: 12px;
+  font-size: 0.7em;
+  color: #d4d1d1;
+}
